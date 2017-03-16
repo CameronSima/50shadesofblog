@@ -1,0 +1,19 @@
+.blog-container {
+	width: 310px;
+	display: inline-block;
+	height: 450px;
+	padding: 8px;
+	vertical-align: top;
+}
+
+.grid-row {
+	height: 500px;
+}
+
+.rank { 
+	text-align: right; }
+
+.blog-img { 
+	width: 300px;
+
+}

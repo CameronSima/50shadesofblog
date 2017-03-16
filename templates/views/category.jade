@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block content
+	.container
+		h3 !{locals.section.toUpperCase()}
+		each site in data.sites
+			div.blog-container
+				if site.image
+					a(href=site.url)
+						img(src=site.image.url, width='300px')
+				a(href=site.url)
+					h5 !{site.title}
+				p !{site.description}

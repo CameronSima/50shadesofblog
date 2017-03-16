@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block content
+	.container
+		.jumbotron
+			span 
+				p The fifty best blogs on the web, in any category, sorted and ranked.
+		each category in data.sites
+			a(href='/blogs/' + category.category.slug)
+				h3 !{category.category.name.toUpperCase()}
+			if category.sites
+				each site, index in category.sites
+					div.blog-container
+
+						if site.image
+							a(href=site.url)
+								img(src=site.image.url, width='300px')
+						a(href=site.url)
+							h5 !{site.title}
+						p !{site.description}
+			h6
+				a(href='/blogs/' + category.category.slug) 
+					| More...
+					
+				
+			
